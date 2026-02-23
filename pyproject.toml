@@ -1,0 +1,14 @@
+[project]
+name = "edge-inference-memory-profiler"
+version = "0.1.0"
+description = "Estimate peak activation memory of ONNX models for edge deployment."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["onnx", "onnxruntime", "numpy"]
+
+[project.scripts]
+eimp = "eimp.cli:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
