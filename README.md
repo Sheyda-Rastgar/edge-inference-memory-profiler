@@ -6,9 +6,11 @@ This tool provides a lightweight, deployment-oriented memory estimate for ONNX m
 
 ## What it does
 
-- Estimates weight storage (Flash proxy)
-- Estimates activation tensor memory (RAM proxy)
-- Reports naive peak activation memory (no buffer reuse simulation yet)
+- Estimates **weight storage** (Flash/ROM proxy) from ONNX initializers
+- Estimates **activation tensor memory** (RAM proxy) from inferred tensor shapes
+- Reports **naive peak** activation memory (no reuse)
+- Reports **reuse peak** activation memory using a greedy lifetime-based buffer reuse simulation
+- Includes an **input baseline** in reuse peak reporting for correctness
 
 ## Quick Example
 
